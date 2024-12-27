@@ -1,15 +1,20 @@
 # Analysis and Prediction of Singapore HDB Resale Flat Prices (2017-2024)
 
 ## Links:
+
 Dataset:
+
 - Dataset: https://www.kaggle.com/datasets/darrylljk/singapore-hdb-resale-flat-prices-2017-2024
 - Tableau: https://public.tableau.com/views/SingaporeHDBResaleFlatPrices/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
 
 ## Objective
+
 The main goal of this project is to analyze the resale prices of HDB flats in Singapore from January 2017 to June 2024 and build predictive models to estimate future resale prices based on various features.
 
 ## Data Description
+
 The dataset contains detailed information on HDB flat resale transactions, including:
+
 - **Month**: Month of sale
 - **Town**: Designated residential area
 - **Flat type**: Classification by room size
@@ -23,6 +28,7 @@ The dataset contains detailed information on HDB flat resale transactions, inclu
 - **Resale price**: Cost of the flat sold
 
 ## Data Preprocessing
+
 1. **Handling Missing Values**:
    - There were no missing values in the dataset.
 2. **Deleting Duplicate Values**:
@@ -35,6 +41,7 @@ The dataset contains detailed information on HDB flat resale transactions, inclu
    - Converted `remaining_lease` to numeric format for better model compatibility.
 
 ## Exploratory Data Analysis (EDA)
+
 1. **Trends Over Time**:
    - Analyzed resale price trends over the months and years.
    - Observed seasonal trends and price fluctuations.
@@ -47,7 +54,9 @@ The dataset contains detailed information on HDB flat resale transactions, inclu
    - Displayed a bar chart of average resale prices by flat type.
 
 ## Model Building and Evaluation
+
 Several regression models were used to predict the resale price:
+
 - Polynomial Regression
 - Neural Network
 - Decision Tree Regressor
@@ -56,25 +65,28 @@ Several regression models were used to predict the resale price:
 - XGBoost Regressor
 
 ### Evaluation Metrics:
+
 - **MAE (Mean Absolute Error)**: Average of absolute differences between predicted and actual values.
 - **RMSE (Root Mean Squared Error)**: Square root of the average of squared differences between predicted and actual values.
 - **R² (Coefficient of Determination)**: Proportion of variance in the dependent variable that is predictable from the independent variables.
 
 ### Model Performance:
 
-| Model                  | MAE      | RMSE     | R²   |
-|------------------------|----------|----------|------|
-| Polynomial Regression  | 69549.3  | 91689.5  | 0.72 |
-| Neural Network         | 83575.0  | 106484.6 | 0.63 |
-| Decision Tree          | 38713.0  | 55757.8  | 0.90 |
-| Random Forest          | 35900.5  | 51043.3  | 0.91 |
-| Gradient Boosting      | 48223.0  | 63155.3  | 0.87 |
-| XGBoost                | 48072.7  | 62809.6  | 0.87 |
+| Model                 | MAE     | RMSE     | R²   |
+| --------------------- | ------- | -------- | ---- |
+| Polynomial Regression | 69549.3 | 91689.5  | 0.72 |
+| Neural Network        | 83575.0 | 106484.6 | 0.63 |
+| Decision Tree         | 38713.0 | 55757.8  | 0.90 |
+| Random Forest         | 35900.5 | 51043.3  | 0.91 |
+| Gradient Boosting     | 48223.0 | 63155.3  | 0.87 |
+| XGBoost               | 48072.7 | 62809.6  | 0.87 |
 
 ## Feature Importance
+
 The following chart shows the top 5 most important features affecting HDB resale prices based on the Random Forest model.
 
 ## Key Insights
+
 1. **Trends**:
    - Observed an overall increase in resale prices over the analyzed period.
    - Significant price fluctuations during certain months due to market conditions.
@@ -85,6 +97,7 @@ The following chart shows the top 5 most important features affecting HDB resale
    - Floor area, flat type, and remaining lease were the most influential features affecting resale prices.
 
 ## Conclusion
+
 1. **Summary**:
    - The analysis provided insights into trends and factors affecting HDB resale prices.
    - Various predictive models were built and evaluated for their accuracy.
@@ -93,4 +106,3 @@ The following chart shows the top 5 most important features affecting HDB resale
    - Explore more advanced machine learning models for better accuracy.
 3. **Applications**:
    - The insights and predictions can assist policymakers, real estate agents, and buyers in making informed decisions.
-
